@@ -1,36 +1,83 @@
 'use strict';
 
-// Task №1
+// 1
 
-let userName = prompt('Введите ваше имя');
-alert(`Привет, ${userName}!`);
+// let tempC = +prompt("Введите температуру в градусах по Цельсию");
 
-// Task №2 
+//     if (tempC >= 0 || tempC < 0) {
+//         alert(`Температура по Фаренгейту: ${Math.floor((9 / 5) * tempC + 32)}`);
+//     } else {
+//         alert('Введите корректные данные');
+//     }
 
-const currentYear = 2023;
-let userAge = +prompt('Введите ваш год рождения в формате XXXX');
-alert(`Вам сейчас: ${currentYear - userAge} лет( год(а) )`);
 
-// Task №3
+// 2
 
-let squareWidth = +prompt('Введите длину стороны квадрата');
-alert(`Периметр квадрата равен: ${squareWidth * 4}`);
+// let admin,
+//     name;
 
-// Task №4
+// name = "Василий";
+// admin = name;
+// console.log(admin);
 
-let radiusCircle = +prompt('Введите радиус окружности');
-const PI = Math.PI;
-let squareCircle = Math.floor(PI * radiusCircle ** 2);
-alert(`Площадь окружности: ${squareCircle}`);
+// 3 
 
-// Task №5
+// console.log(10 + 10 + "10"); //Сложил 10 и 10, получилось 20, потом преобразовал 20 в строку и прибавил строку 10, получилось 2010
+// console.log(10 + "10" + 10); //Тут всё преобразовал в строки и вывел строку 101010
+// console.log(10 + 10 + +"10"); //Унарный плюс преобразовал последнюю 10 в тип данных number, всё сложил и получилось 30
+// console.log(10 / -0); //Тут пустую строку преобразовывает в минус ноль и делит 10 на -0(унарный минус), получает -infinity
 
-let distanceBetweenCities = +prompt('Введите расстояние между двумя городами в км');
-let duration = +prompt('За сколько часов вы хотите добраться?');
-alert(`Чтобы успеть вовремя, вам необходимо двигаться со скорость: ${Math.floor(distanceBetweenCities / duration)} км/час`);
+// 4
 
-// Task №6
+// let a = 5;
+// let b = a++ + 5; 
+// let c = ++a + --b; 
+// c -= 5; 
+// a *=2; 
 
-let userDollars = +prompt('Введите колличество долларов, которые хотите конвертировать в евро');
-const euroPerDollar = 0.93;
-alert(`${userDollars} доллара(ов) равно: ${userDollars * euroPerDollar} евро`);
+// console.log(a+b+c); // 14 + 9 + 11 = 34 (При первом расчёте получил 35 - не учёл --b и посчитал b как 10)
+
+// 5
+
+// let sumMoney = +prompt("Введите сумму денег в кошелке"),
+//     costCh = +prompt("Введите цену за одну шоколадку"),
+//     sumCh = Math.floor(sumMoney / costCh);
+
+//     if (sumMoney > 0 && costCh > 0) {
+//         alert(`Вы можете купить ${sumCh} шоколадок(ки)`);
+//         alert(`Ваша сдача: ${(sumMoney - (sumCh * costCh)).toFixed(1)}`);
+//     } else {
+//         alert('Введены некорректные данные');
+//     }
+
+// 6 
+
+// let userNumber = +prompt("Введите число для проверки чётности");
+
+// if (userNumber % 2 == 0) {
+//     if (userNumber <= 0 || userNumber > 0) {
+//         alert('Число чётное!');
+//     } else {
+//         alert('Введите число!');
+//     }
+// } else {
+//     if (userNumber <= 0 || userNumber > 0) {
+//         alert('Число нечётное!');
+//     } else {
+//         alert('Введите число!');
+//     }
+// }
+
+// 7
+
+// let userReverse = +prompt("Введите трёхзначное число в формате ХХХ"),
+//     result;
+
+//     if (userReverse >= 100 && userReverse <= 999 && (userReverse % Math.floor(userReverse) == 0)) {
+//         result = userReverse % 10 + '';
+//         result += Math.floor((userReverse / 10) % 10);
+//         result += Math.floor((userReverse / 100) % 10);
+//         alert(`Число задом наперёд - ${result}`);
+//     } else {
+//         alert("Введите трёхзначное число в формате ХХХ");
+//     }
