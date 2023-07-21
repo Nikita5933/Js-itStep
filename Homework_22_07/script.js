@@ -27,7 +27,7 @@ function sqSum(arr) {
     return res;
 }
 
-// console.log(sqSum([1,2,3,4,5]));
+console.log(sqSum([1,2,3,4,5]));
 
 // 2 Дан массив с числами. Найдите сумму квадратных корней элементов этого
 //   массива.
@@ -67,14 +67,14 @@ const sumOfPositive = arr => {
 function sumOfPositive2(arr) {
     let res = 0;
     for (let i = 0; i < arr.length; i++) {
-        if ((arr[i] >= 0) && (arr[i] < 10)) {
+        if ((arr[i] > 0) && (arr[i] < 10)) {
             res += arr[i];
         }
     }
     return res;
 }
 
-// console.log(sumOfPositive2([1,2,11,12,9,0,-23,10]));
+// console.log(sumOfPositive2([1,2,11,1+2,9,0,-23,10]));
 
 // 5 Напишите код, который преобразовывает и объединяет все элементы
 //   массива в одно строковое значение. Элементы массива будут
@@ -136,4 +136,4 @@ function sumNumArray(arr) {
     return `Сумма индексов максимального и минимального числа: ${indexMax + indexMin}`;
 }
 
-console.log(sumNumArray(array));
+// console.log(sumNumArray(array));
