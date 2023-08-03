@@ -46,7 +46,7 @@ const reverseNum = num => {
     let str = num.toString();
     let res = '';
     
-    if (num > 0) {
+    if (str[0] != '-') {
         for (let i = str.length; i > 0; i--) {
             res += str[i- 1];
         }
@@ -59,7 +59,8 @@ const reverseNum = num => {
     }
 };
 
-// console.log(reverseNum(4123));
+
+console.log(reverseNum(23));
 
 // 3 Дано некоторое число: 12345 Найдите сумму цифр этого числа.
 
