@@ -47,41 +47,69 @@ vehicle.durationTime(321);
 //      5. Функция сокращения объекта-дроби.
 
 
-const numObj = {
-    numerator: 42,
-    denominator: 63,
-    summ: function() {
-        return this.numerator + this.denominator;
-    },
-    subtraction: function() {
-        return this.denominator - this.numerator;
-    },
-    multiplication: function() {
-        return this.numerator * this.denominator;
-    },
-    division: function() {
-        return this.denominator / this.numerator;
-    },
-    reduction: function() {
-        let num = this.numerator;
-        let den = this.denominator;
+const obj1 = {
+    numerator: 1,
+    denominator: 24
+}
+const obj2 = {
+    numerator: 2,
+    denominator: 10
+}
+function sumObj(obj1, obj2) {
+    const object1 = reduction(obj1);
+    const object2 = reduction(obj2);
+    return reduction({
+        numerator: object1.numerator * object2.denominator + object2.numerator * object2.denominator,
+        denominator: object1.denominator * object2.denominator
+    })
+}
+
+function subtractionObj(obj1, obj2) {
+    const object1 = reduction(obj1);
+    const object2 = reduction(obj2);
+    return reduction({
+        numerator: obj1.numerator * obj2.denominator - obj2.numerator * obj1.denominator,
+        denominator: obj1.denominator * obj2.denominator
+    })
+}
+
+console.log(divisionObj(obj2,obj1))
+function multiplicationObj(obj1, obj2) {
+    return reduction({
+        numerator: obj1.numerator * obj2.numerator,
+        denominator: obj1.denominator * obj2.denominator
+    })
+}
+function divisionObj(obj1, obj2) {
+    return reduction({
+        numerator: obj1.denominator * obj2.numerator,
+        denominator: obj1.numerator * obj2.denominator
+    })
+}
+
+
+function reduction(obj) {
+        let num = obj.numerator;
+        let den = obj.denominator;
         let variableGCD;
         while (den) {
             variableGCD = num % den;
             num = den;
             den = variableGCD;
         }
-        return this.numerator = this.numerator / num, this.denominator =  this.denominator / num;
-            
-    }
+        return {
+                numerator: obj.numerator / num,
+                denominator: obj.denominator / num
+    };
 }
+console.log(sumObj(obj1, obj2));
+console.log(subtractionObj(obj1, obj2));
+console.log(multiplicationObj(obj1, obj2));
+console.log(divisionObj(obj1, obj2));
+console.log(reduction(obj2));
 
-console.log(numObj.summ());
 
-numObj.reduction();
 
-console.log(numObj.numerator);
-console.log(numObj.denominator);
 
 // 3 Создать массив «Список покупок». Каждый элемент массива
 //   является объектом, который содержит название продукта, необходимое
