@@ -41,32 +41,36 @@ const pyramidArrow = (num) => {
 // и выводит его на экран в формате «чч:мм:сс». Если при вызове функции
 // минуты и/или секунды не были переданы, то выводить их как 00. 
 
-function timeDecl(hours, min, sec) {
+function timeDecl(hours, min , sec) {
     if ((hours >= 0 && hours <= 23) && (min >= 1 && min <= 59) && (sec >= 1 && sec <= 59)) {
         console.log(`${hours}:${min}:${sec}`);
-    } else if (hours > 24) {
+    } else if (hours > 23) {
         console.log("Некорректный ввод");
-    } else if (!min || min === 0) {
+    } else if (min === 0 && sec === 0) {
          console.log(`${hours}:00:00`);
-    } else if (!sec || sec === 0) {
+    } else if (min === 0) {
+        console.log(`${hours}:00:${sec}`);
+    }  else if (sec === 0) {
         console.log(`${hours}:${min}:00`);
-    } else {
+    }  else {
         console.log("Некорректный ввод");
     }
 }
 
-// timeDecl(21,59,59);
+timeDecl(12,0,59);
 
 const timeExpr = function(hours, min, sec) {
     if ((hours >= 0 && hours <= 23) && (min >= 1 && min <= 59) && (sec >= 1 && sec <= 59)) {
         console.log(`${hours}:${min}:${sec}`);
-    } else if (hours > 24) {
+    } else if (hours > 23) {
         console.log("Некорректный ввод");
-    } else if (!min || min === 0) {
+    } else if (min === 0 && sec === 0) {
          console.log(`${hours}:00:00`);
-    } else if (!sec || sec === 0) {
+    } else if (min === 0) {
+        console.log(`${hours}:00:${sec}`);
+    }  else if (sec === 0) {
         console.log(`${hours}:${min}:00`);
-    } else {
+    }  else {
         console.log("Некорректный ввод");
     }
 }
@@ -76,13 +80,15 @@ const timeExpr = function(hours, min, sec) {
 const timeArrow = (hours, min, sec) => {
     if ((hours >= 0 && hours <= 23) && (min >= 1 && min <= 59) && (sec >= 1 && sec <= 59)) {
         console.log(`${hours}:${min}:${sec}`);
-    } else if (hours > 24) {
+    } else if (hours > 23) {
         console.log("Некорректный ввод");
-    } else if (!min || min === 0) {
+    } else if (min === 0 && sec === 0) {
          console.log(`${hours}:00:00`);
-    } else if (!sec || sec === 0) {
+    } else if (min === 0) {
+        console.log(`${hours}:00:${sec}`);
+    }  else if (sec === 0) {
         console.log(`${hours}:${min}:00`);
-    } else {
+    }  else {
         console.log("Некорректный ввод");
     }
 };
