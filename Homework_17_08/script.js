@@ -90,4 +90,4 @@ const ar11 = ['b', 'c', 'e'];
 const arr12 = ['b', 'e', 'c'];
 // console.log(intersection(arr5, arr6)) // [2]
 // console.log(intersection(arr7, arr8, arr9)) // ['b']
-console.log(intersection(arr10, ar11, arr12,arr10, ar11, arr12,arr10, ar11, arr12,arr10, ar11, arr12)) // ['b', 'e']
+console.log(intersection(arr10, ar11, arr12,arr10, ar11, arr12,arr10, ar11, arr12,arr10, ar11)) // ['b', 'e']
