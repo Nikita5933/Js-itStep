@@ -21,22 +21,17 @@ const vehicle = {
 Средняя скорость в км/ч: ${this.avarageSpeedKm}.`);
     },
     durationTime: function(distance) {
-        const timeHour = distance / this.avarageSpeedKm;
-        const timeMin = Math.round((timeHour - Math.floor(timeHour)) * 60);
-        const breaks = Math.floor(timeHour / 4);
-
-        if (timeHour <= 4 && timeHour > 0) {
-            console.log(`Автомобиль проедёт расстояние: ${distance} км за ${Math.floor(timeHour)} час(а) и ${timeMin} минут(ы).`);
-        } else if (timeHour > 4) {
-            console.log(`Автомобиль проедёт расстояние: ${distance} км за ${Math.floor(timeHour) + breaks} часа(ов) и ${timeMin} минут(ы), с перерывом(вами) на ${breaks} час(а).`);
-        } else {
-            console.log('Ошибка ввода');
-        }
+        const prevTimeHour = distance / this.avarageSpeedKm; 
+        const hourForDistance = Math.floor(prevTimeHour); 
+        const timeMin = Math.round((prevTimeHour - Math.floor(prevTimeHour)) * 60);
+        const prevRelaxTime = prevTimeHour/4; 
+        const breaks = prevRelaxTime===Math.floor(prevRelaxTime)?Math.floor(prevRelaxTime)-1:Math.floor(prevRelaxTime); 
+        console.log(`Автомобиль проедёт расстояние: ${distance} км за ${hourForDistance + breaks} часа(ов) и ${timeMin} минут(ы), с перерывом(вами) на ${breaks} час(а).`);
     }
 };
 
 vehicle.info();
-vehicle.durationTime(321);
+vehicle.durationTime(1280);
 
 // 2 Создать объект, хранящий в себе отдельно числитель и
 //   знаменатель дроби, и следующие функции для работы с этим объектом.
