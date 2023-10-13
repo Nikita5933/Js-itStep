@@ -115,7 +115,7 @@ rivian.brake();
 rivian.speedUS = 80;
 console.log(rivian);
 rivian.chargeBattery(90);
-console.dir(rivian.chrge)
+console.dir(rivian.charge)
 
 
 ///////////////////////////////
